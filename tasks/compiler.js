@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
 
-    grunt.registerMultiTask('simple_underscore_compiler', 'Compile underscore templates into JavaScript files.', function() {
+    grunt.registerMultiTask('grunt-simple-underscore-compiler', 'Compile underscore templates into JavaScript files.', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             separator: grunt.util.linefeed + grunt.util.linefeed,

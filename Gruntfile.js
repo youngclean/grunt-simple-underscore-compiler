@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         },
 
         // Configuration to be run (and then tested).
-        simple_underscore_compiler: {
+        underscore_compiler: {
             custom_target: {
                 files: {
                     'dist/test.js': 'test/test.tpl',
