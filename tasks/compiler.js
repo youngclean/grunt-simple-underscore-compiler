@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
 
-    grunt.registerMultiTask('grunt-simple-underscore-compiler', 'Compile underscore templates into JavaScript files.', function() {
+    grunt.registerMultiTask('compiler', 'Compile underscore templates into JavaScript files.', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             separator: grunt.util.linefeed + grunt.util.linefeed,
@@ -23,6 +23,7 @@ module.exports = function(grunt) {
         });
 
         var filesCount = 0;
+        var quoteChar = options.quoteChar;
 
         // Iterate over all specified file groups.
         this.files.forEach(function(f) {
@@ -52,7 +53,7 @@ module.exports = function(grunt) {
                 // console.log(source);
                 var result;
 
-                result = html2string(source, quoteChar, options.raw, options.amd || hasNamespace ? options.indent + options.indent : '');
+                result = html2string(source, quoteChar, options.raw, '');
                 result = quoteChar + result + quoteChar + ';';
 
                 return result;

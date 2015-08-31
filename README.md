@@ -24,14 +24,14 @@ In your project's Gruntfile, add a section named `grunt-simple-underscore-compil
 
 ```js
 grunt.initConfig({
-  underscore_compiler: {
-            custom_target: {
-                files: {
-                    'dist/test.js': 'test/test.tpl',
-                    'dist/test2.js': 'test/test.html'
-                }
+    compiler: {
+        custom_target: {
+            files: {
+                'dist/test.js': 'test/test.tpl',
+                'dist/test2.js': 'test/test.html'
             }
         }
+    }
 });
 ```
 

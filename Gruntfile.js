@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         },
 
         // Configuration to be run (and then tested).
-        underscore_compiler: {
+        compiler: {
             custom_target: {
                 files: {
                     'dist/test.js': 'test/test.tpl',
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'simple_underscore_compiler', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'compiler', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
